@@ -1,2 +1,2 @@
 # citaz
-Minimal Bank Website
+Bank Website
