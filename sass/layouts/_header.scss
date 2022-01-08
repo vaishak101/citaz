@@ -1,5 +1,6 @@
 .header {
   height: 100vh;
+
   background-color: $color-grad-1__col-1;
   background-image: linear-gradient(
     215deg,
@@ -7,7 +8,7 @@
     $color-grad-1__col-1 64%
   );
   position: relative;
-  clip-path: ellipse(100% 66% at 16% 25%);
+  clip-path: ellipse(100% 66% at 22% 27%);
 }
 
 .nav {
@@ -37,6 +38,7 @@
   }
 }
 .hero {
+  max-width: 114rem;
   &__img {
     width: 28rem;
     height: 23rem;
