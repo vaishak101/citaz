@@ -1,13 +1,17 @@
 .header {
   height: 100vh;
-  background-color: #0beef9;
-  background-image: linear-gradient(215deg, #48a9fe 0%, #0beef9 64%);
+  background-color: $color-grad-1__col-1;
+  background-image: linear-gradient(
+    215deg,
+    $color-grad-1__col-2 0%,
+    $color-grad-1__col-1 64%
+  );
   position: relative;
-  clip-path: ellipse(100% 55% at 75% 25%);
+  clip-path: ellipse(100% 66% at 16% 25%);
 }
 
 .nav {
-  padding: 2rem;
+  padding: 0.5rem 2rem;
   @include flex-space-bw;
   &__logo {
     width: 7rem;
@@ -18,14 +22,37 @@
     @include flex-center;
     gap: 2rem;
   }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 2rem;
+      color: $color-primary-teal--darker;
+      font-weight: 300;
+    }
+    &:hover,
+    &:active {
+      font-weight: 400;
+    }
+  }
 }
-.hero-img {
-  width: 28rem;
-  height: 23rem;
-  position: absolute;
-  right: 10%;
-  bottom: 50%;
-  transform: translateY(45%) rotate(-10deg);
-  animation: moveInBottom 0.5s ease-out 0.65s;
-  animation-fill-mode: backwards;
+.hero {
+  &__img {
+    width: 28rem;
+    height: 23rem;
+    position: absolute;
+    left: 10%;
+    bottom: 50%;
+    transform: translateY(45%) rotate(-10deg) scale(1.1);
+    animation: moveInBottom 0.5s ease-out 0.65s;
+    animation-fill-mode: backwards;
+  }
+  &__text-box {
+    position: absolute;
+    right: 0%;
+    bottom: 40%;
+    width: 50%;
+    animation: moveInRight 0.5s ease-out 0.65s;
+    animation-fill-mode: backwards;
+  }
 }

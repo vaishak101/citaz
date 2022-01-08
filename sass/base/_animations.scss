@@ -1,15 +1,28 @@
 @keyframes moveInBottom {
   0% {
-    right: 10%;
-    bottom: 0%;
+    left: 10%;
+    bottom: -30%;
     transform: rotate(0) scale(0.5);
     opacity: 0;
   }
 
   100% {
-    right: 10%;
+    left: 10%;
     bottom: 50%;
-    transform: translateY(45%) rotate(-10deg);
+    transform: translateY(45%) rotate(-10deg) scale(1.1);
+    opacity: 1;
+  }
+}
+@keyframes moveInRight {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translate(0);
     opacity: 1;
   }
 }
