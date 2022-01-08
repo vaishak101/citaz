@@ -1,0 +1,28 @@
+.operations__container {
+  position: relative;
+  padding: 5rem 2rem;
+  &--btn {
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include flex-space-bw;
+    z-index: 100000;
+  }
+}
+.tab {
+  background-color: $color-grad-1__col-1;
+  background-image: linear-gradient(
+    315deg,
+    $color-grad-1__col-2 0%,
+    $color-grad-1__col-1 64%
+  );
+  width: 80%;
+  padding: 3rem 8rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1rem;
+}
