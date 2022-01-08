@@ -1,3 +1,59 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Chivo", sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100vh;
+  background-color: #0beef9;
+  background-image: linear-gradient(215deg, #48a9fe 0%, #0beef9 64%);
+  position: relative;
+}
+
+.header-cont {
+  height: 100%;
+  background-color: white;
+  clip-path: ellipse(81% 39% at 51% 92%);
+}
+
+.nav {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo {
+  width: 7rem;
+  height: 7rem;
+}
+.nav__ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-img {
+  width: 35rem;
+  height: 30rem;
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+  transform: translateY(65%);
+  opacity: 0;
+}
 
 /*# sourceMappingURL=style.css.map */

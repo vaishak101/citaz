@@ -1,0 +1,33 @@
+.header {
+  height: 100vh;
+  background-color: #0beef9;
+  background-image: linear-gradient(215deg, #48a9fe 0%, #0beef9 64%);
+  position: relative;
+}
+.header-cont {
+  height: 100%;
+  background-color: white;
+  clip-path: ellipse(81% 39% at 51% 92%);
+}
+.nav {
+  padding: 2rem;
+  @include flex-space-bw;
+  &__logo {
+    width: 7rem;
+    height: 7rem;
+  }
+  &__ul {
+    list-style-type: none;
+    @include flex-center;
+    gap: 2rem;
+  }
+}
+.hero-img {
+  width: 35rem;
+  height: 30rem;
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+  transform: translateY(65%);
+  opacity: 0;
+}
