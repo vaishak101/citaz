@@ -3,12 +3,9 @@
   background-color: #0beef9;
   background-image: linear-gradient(215deg, #48a9fe 0%, #0beef9 64%);
   position: relative;
-  // clip-path: ellipse(100% 55% at 48% 44%);
   clip-path: ellipse(100% 55% at 75% 25%);
 }
 
-.hero {
-}
 .nav {
   padding: 2rem;
   @include flex-space-bw;
