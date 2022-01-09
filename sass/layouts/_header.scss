@@ -12,7 +12,10 @@
 }
 
 .nav {
+  z-index: 92437991;
+  position: absolute;
   padding: 0.5rem 2rem;
+  width: 100%;
   @include flex-space-bw;
   &__logo {
     width: 7rem;
@@ -56,5 +59,22 @@
     width: 50%;
     animation: moveInRight 0.5s ease-out 0.65s;
     animation-fill-mode: backwards;
+  }
+}
+//sticky nav
+.nav__sticky {
+  z-index: 92437991;
+  position: fixed;
+
+  background-color: $color-grad-1__col-1;
+  background-image: linear-gradient(
+    215deg,
+    ($color-grad-1__col-2) 0%,
+    ($color-grad-1__col-1) 64%
+  );
+  opacity: 0.9;
+  transition: opacity 0.5s ease;
+  &:hover {
+    opacity: 1;
   }
 }

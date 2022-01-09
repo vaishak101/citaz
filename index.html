@@ -20,25 +20,25 @@
     <title>Citaz Bank</title>
   </head>
   <body>
+    <div class="nav">
+      <a href="#"><img src="img/logo/logo.png" class="nav__logo" /></a>
+      <ul class="nav__ul">
+        <li class="nav__li">
+          <a href="#features" class="nav__link">Features</a>
+        </li>
+        <li class="nav__li">
+          <a href="#operations" class="nav__link">Operations</a>
+        </li>
+        <li class="nav__li">
+          <a href="#testimonials" class="nav__link">Testimonials</a>
+        </li>
+        <li class="nav__li">
+          <a href="#cta" class="nav__link">Open Account</a>
+        </li>
+      </ul>
+    </div>
     <!-- HEADER**********************************************************************HEADER -->
     <header class="header">
-      <div class="nav">
-        <a href="#"><img src="img/logo/logo.png" class="nav__logo" /></a>
-        <ul class="nav__ul">
-          <li class="nav__li">
-            <a href="#features" class="nav__link">Features</a>
-          </li>
-          <li class="nav__li">
-            <a href="#operations" class="nav__link">Operations</a>
-          </li>
-          <li class="nav__li">
-            <a href="#testimonials" class="nav__link">Testimonials</a>
-          </li>
-          <li class="nav__li">
-            <a href="#cta" class="nav__link">Open Account</a>
-          </li>
-        </ul>
-      </div>
       <div class="hero">
         <img src="img/hero.png" class="hero__img" />
         <div class="hero__text-box">
@@ -49,7 +49,7 @@
     </header>
     <main class="main">
       <!-- FEATURES**********************************************************************FEATURES -->
-      <section class="features" id="features">
+      <section class="features section" id="features">
         <div class="container">
           <div class="features__text-box u-margin-bottom-big">
             <h1 class="heading-primary">
@@ -122,7 +122,7 @@
         </div>
       </section>
       <!-- OPERATIONS**********************************************************************OPERATIONS -->
-      <section class="operations" id="operations">
+      <section class="operations section" id="operations">
         <div class="container">
           <div class="features__text-box u-margin-bottom-big">
             <h1 class="heading-primary">
@@ -132,17 +132,20 @@
           </div>
           <div class="operations__container">
             <div class="operations__container--btn">
-              <button class="operations__btn operations__btn--1">
+              <button
+                class="operations__btn operations__btn--1 op--active"
+                data-btn="1"
+              >
                 Online Banking</button
-              ><button class="operations__btn operations__btn--2">
+              ><button class="operations__btn operations__btn--2" data-btn="2">
                 Mobile Banking</button
-              ><button class="operations__btn operations__btn--3">
+              ><button class="operations__btn operations__btn--3" data-btn="3">
                 24x7 Support
               </button>
             </div>
-            <div class="tab">
-              <h1 class="heading-secondary--operations">
-                Now you can avail your bank services online from anywhere
+            <div class="tab tab__1 tab__active">
+              <h1 class="heading-secondary--operations u-margin-bottom-small">
+                Online Banking is Smooth
               </h1>
               <p class="paragraph">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
@@ -152,18 +155,11 @@
                 sit amet consectetur adipisicing elit. Praesentium doloribus
                 quos quod dolorem voluptatibus placeat in est enim, quisquam,
                 eaque perferendis amet ut! Earum, voluptatem! Odit placeat illo
-                ipsa vel?Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. Quo corporis voluptatibus alias vero autem fugiat eos
-                reiciendis tenetur expedita? Vel incidunt nam quisquam rerum
-                excepturi voluptate voluptas voluptates rem provident?Lorem
-                ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-                doloribus quos quod dolorem voluptatibus placeat in est enim,
-                quisquam, eaque perferendis amet ut! Earum, voluptatem! Odit
-                placeat illo ipsa vel?
+                ipsa vel?
               </p>
             </div>
-            <div class="tab">
-              <h1 class="heading-secondary--operations">
+            <div class="tab tab__2">
+              <h1 class="heading-secondary--operations u-margin-bottom-small">
                 Apps for the new generation
               </h1>
 
@@ -175,18 +171,13 @@
                 sit amet consectetur adipisicing elit. Praesentium doloribus
                 quos quod dolorem voluptatibus placeat in est enim, quisquam,
                 eaque perferendis amet ut! Earum, voluptatem! Odit placeat illo
-                ipsa vel?Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. Quo corporis voluptatibus alias vero autem fugiat eos
-                reiciendis tenetur expedita? Vel incidunt nam quisquam rerum
-                excepturi voluptate voluptas voluptates rem provident?Lorem
-                ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-                doloribus quos quod dolorem voluptatibus placeat in est enim,
-                quisquam, eaque perferendis amet ut! Earum, voluptatem! Odit
-                placeat illo ipsa vel?
+                ipsa vel?
               </p>
             </div>
-            <div class="tab">
-              <h1 class="heading-secondary--operations">Call us anytime</h1>
+            <div class="tab tab__3">
+              <h1 class="heading-secondary--operations u-margin-bottom-small">
+                Call us anytime
+              </h1>
 
               <p class="paragraph">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
@@ -196,21 +187,14 @@
                 sit amet consectetur adipisicing elit. Praesentium doloribus
                 quos quod dolorem voluptatibus placeat in est enim, quisquam,
                 eaque perferendis amet ut! Earum, voluptatem! Odit placeat illo
-                ipsa vel?Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. Quo corporis voluptatibus alias vero autem fugiat eos
-                reiciendis tenetur expedita? Vel incidunt nam quisquam rerum
-                excepturi voluptate voluptas voluptates rem provident?Lorem
-                ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-                doloribus quos quod dolorem voluptatibus placeat in est enim,
-                quisquam, eaque perferendis amet ut! Earum, voluptatem! Odit
-                placeat illo ipsa vel?
+                ipsa vel?
               </p>
             </div>
           </div>
         </div>
       </section>
       <!-- TESTIMONIALS**********************************************************************TESTIMONIALS -->
-      <section class="testimonials" id="testimonials">
+      <section class="testimonials section" id="testimonials">
         <div class="container">
           <div class="features__text-box u-margin-bottom-medium">
             <h1 class="heading-primary">
@@ -321,7 +305,7 @@
         </div>
       </section>
       <!-- CTA**********************************************************************CTA -->
-      <section class="cta" id="cta">
+      <section class="cta section" id="cta">
         <div class="container">
           <div class="features__text-box u-margin-bottom-big">
             <h1 class="heading-primary">Open your free acount today !</h1>

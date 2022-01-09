@@ -25,4 +25,7 @@
   left: 50%;
   transform: translateX(-50%);
   border-radius: 1rem;
+  &__active {
+    z-index: 10000;
+  }
 }

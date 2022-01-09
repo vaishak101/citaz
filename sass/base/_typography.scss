@@ -7,6 +7,11 @@
   font-size: 2rem;
   font-weight: 700;
   color: $color-primary-teal;
+  &--operations {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-primary-teal--darker;
+  }
 }
 .heading-tertiary {
   padding: 2rem 0;
@@ -17,8 +22,8 @@
   color: $color-primary-teal--darker;
   border-bottom: 5px solid $color-primary-teal--darker;
 }
-.paragraphy {
-  font-size: 2rem;
+.paragraph {
+  font-size: 1.5rem;
   color: $color-primary-teal--darker;
 }
 .feature__card__heading {

@@ -49,6 +49,25 @@ document.addEventListener('keydown', function (e) {
     nextSlide();
   }
 });
+// Reveal section
+const allSection = document.querySelectorAll('.section');
+
+const revealSection = function (entries, SecObserver) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('sec-hidden');
+  SecObserver.unobserve(entry.target);
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+  // rootMargin: '-50px',
+});
+allSection.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('sec-hidden');
+});
+//Smooth scroll
 document.querySelector('.nav__ul').addEventListener('click', function (e) {
   if (e.target.classList.contains('nav__link')) {
     e.preventDefault();
@@ -62,5 +81,41 @@ document.querySelector('.nav__ul').addEventListener('click', function (e) {
       top: idcord.top + window.pageYOffset,
       behavior: 'smooth',
     });
+  }
+});
+
+//sticky nav
+const nav = document.querySelector('.nav');
+const header = document.querySelector('.header');
+//....Functions
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    nav.classList.add('nav__sticky');
+  } else {
+    nav.classList.remove('nav__sticky');
+  }
+};
+//....Observer
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-100px`,
+});
+headerObserver.observe(header);
+//tab Pane
+let tabpane = document.querySelector('.operations__container');
+let optBtn = document.querySelectorAll('.operations__btn');
+let tabs = document.querySelectorAll('.tab');
+tabpane.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('operations__btn')) {
+    optBtn.forEach(s => s.classList.remove('op--active'));
+    tabs.forEach(s => s.classList.remove('tab__active'));
+    let tab = document.querySelector(`.tab__${e.target.dataset.btn}`);
+    tab.classList.add('tab__active');
+    e.target.classList.add('op--active');
+  } else {
+    return;
   }
 });
