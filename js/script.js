@@ -1,41 +1,22 @@
+//SLIDER
 const sliderBtnLeft = document.querySelector('.slider__btn--left');
 const sliderBtnRight = document.querySelector('.slider__btn--right');
-const dotsCont = document.querySelector('.dots__container');
 
-//slider
 const slide = document.querySelectorAll('.slide');
 let curSlide = 0;
 let maxSlide = slide.length - 1;
-const dotActive = function (slide) {
-  document
-    .querySelectorAll('.dots__b')
-    .forEach(dot => dot.classList.remove('dots__b--active'));
 
-  document
-    .querySelector(`.dots__b[data-slide="${slide}"]`)
-    .classList.add('dots__b--active');
-};
-///test -start
-const optest = function (cursl) {
-  if (cursl === 0) {
-    slide[cursl].style.opacity = 1;
-    for (let i = 1; i < slide.length; i++) {
-      slide[i].style.opacity = 0.5;
-    }
-  } else {
-    slide[cursl].style.opacity = 1;
-    slide.forEach((s, i) =>
-      i === cursl ? console.log('donothing') : (s.style.opacity = 0.5)
-    );
-  }
-};
-//test -end
 const slider = function (cursl) {
   slide.forEach(
-    (s, i) => (s.style.transform = `translateX(${60 * (i - cursl)}%) `)
+    (s, i) =>
+      (s.style.transform = `translateX(${55 * (i - cursl)}%) scale(0.8)`)
   );
-
-  dotActive(cursl);
+  slide.forEach((s, i) =>
+    i === cursl
+      ? ((slide[cursl].style.opacity = 1),
+        (slide[cursl].style.transform = 'scale(1)'))
+      : (s.style.opacity = 0.3)
+  );
 };
 const nextSlide = function () {
   if (curSlide === maxSlide) {
@@ -43,8 +24,8 @@ const nextSlide = function () {
   } else {
     curSlide++;
   }
+  // console.log(curSlide);
   slider(curSlide);
-  optest(curSlide);
 };
 const prevSlide = function () {
   if (curSlide === 0) {
@@ -52,28 +33,13 @@ const prevSlide = function () {
   } else {
     curSlide--;
   }
+  // console.log(curSlide);
+
   slider(curSlide);
-  optest(curSlide);
 };
 
-const createBtn = function () {
-  slide.forEach(function (_, i) {
-    dotsCont.insertAdjacentHTML(
-      'beforeend',
-      ` <button class="dots__b" data-slide="${i}"></button>`
-    );
-  });
-};
-createBtn();
 slider(0);
-optest(0);
-dotsCont.addEventListener('click', function (e) {
-  if (e.target.classList.contains('dots__b')) {
-    const dotNum = e.target.dataset.slide;
-    slider(dotNum);
-  } else {
-  }
-});
+
 sliderBtnLeft.addEventListener('click', prevSlide);
 sliderBtnRight.addEventListener('click', nextSlide);
 document.addEventListener('keydown', function (e) {
