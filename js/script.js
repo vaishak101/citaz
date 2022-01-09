@@ -15,11 +15,26 @@ const dotActive = function (slide) {
     .querySelector(`.dots__b[data-slide="${slide}"]`)
     .classList.add('dots__b--active');
 };
+///test -start
+const optest = function (cursl) {
+  if (cursl === 0) {
+    slide[cursl].style.opacity = 1;
+    for (let i = 1; i < slide.length; i++) {
+      slide[i].style.opacity = 0.5;
+    }
+  } else {
+    slide[cursl].style.opacity = 1;
+    slide.forEach((s, i) =>
+      i === cursl ? console.log('donothing') : (s.style.opacity = 0.5)
+    );
+  }
+};
+//test -end
 const slider = function (cursl) {
   slide.forEach(
     (s, i) => (s.style.transform = `translateX(${60 * (i - cursl)}%) `)
   );
-  slide.forEach((s, i) => console.log(i - cursl));
+
   dotActive(cursl);
 };
 const nextSlide = function () {
@@ -29,6 +44,7 @@ const nextSlide = function () {
     curSlide++;
   }
   slider(curSlide);
+  optest(curSlide);
 };
 const prevSlide = function () {
   if (curSlide === 0) {
@@ -37,6 +53,7 @@ const prevSlide = function () {
     curSlide--;
   }
   slider(curSlide);
+  optest(curSlide);
 };
 
 const createBtn = function () {
@@ -49,6 +66,7 @@ const createBtn = function () {
 };
 createBtn();
 slider(0);
+optest(0);
 dotsCont.addEventListener('click', function (e) {
   if (e.target.classList.contains('dots__b')) {
     const dotNum = e.target.dataset.slide;
