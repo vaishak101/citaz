@@ -1,0 +1,105 @@
+.slider {
+  max-width: 100rem;
+  height: 55rem;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 5rem;
+  overflow: hidden;
+  &__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: inherit;
+    color: #333;
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 3.25rem;
+    cursor: pointer;
+    &--left {
+      left: 6%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--right {
+      right: 6%;
+      transform: translate(50%, -50%);
+    }
+  }
+}
+.slide {
+  width: 100%;
+  height: 50rem;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease;
+  &_content {
+    width: 55%;
+    // height: 50rem;
+    background-color: $color-grad-1__col-1;
+    background-image: linear-gradient(
+      615deg,
+      $color-grad-1__col-2 0%,
+      $color-grad-1__col-1 64%
+    );
+    padding: 3rem 5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__img {
+      width: 16rem;
+      height: 16rem;
+      border-radius: 50%;
+    }
+    &__name {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 0.3rem;
+      color: $color-primary-teal--darker;
+    }
+    &__para {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+      color: $color-primary-teal--darker;
+    }
+  }
+}
+.dots__container {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+}
+.dots__b {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__b:last-child {
+  margin: 0;
+}
+
+.dots__b--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+}
