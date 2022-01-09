@@ -28,6 +28,16 @@ body {
   color: #30e3ca;
 }
 
+.heading-tertiary {
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #40514e;
+  border-bottom: 5px solid #40514e;
+}
+
 .paragraphy {
   font-size: 2rem;
   color: #40514e;
@@ -129,6 +139,25 @@ body {
 }
 .operations__btn--3 {
   background-color: #e69e32;
+}
+
+.btn--submit {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  font-family: inherit;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  background-color: #40514e;
+  text-decoration: none;
+  color: #30e3ca;
+  border-radius: 50px;
+  border: none;
+}
+.btn--submit:hover {
+  transform: translateY(-5%);
+  font-weight: 600;
 }
 
 .composition {
@@ -307,6 +336,64 @@ body {
   color: #40514e;
 }
 
+.contact_form {
+  width: 60vw;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 6rem 10rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  background-color: #0beef9;
+  background-image: linear-gradient(215deg, #48a9fe 0%, #0beef9 64%);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form__group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__label {
+  width: 50%;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #40514e;
+  transition: all 0.2s ease;
+}
+.form__label:hover {
+  font-weight: 900;
+}
+.form__input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 50px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 50%;
+  display: block;
+  background: #f3f6f6;
+  transition: all 0.5s ease-out;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #30e3ca;
+  background: #f3f6f6;
+}
+.form__input:focus:invalid {
+  border-bottom: 3px solid red;
+}
+
 .header {
   height: 100vh;
   background-color: #0beef9;
@@ -382,6 +469,10 @@ body {
 }
 
 .testimonials {
+  padding: 3rem 2rem;
+}
+
+.cta {
   padding: 3rem 2rem;
 }
 

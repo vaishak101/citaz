@@ -8,6 +8,15 @@
   font-weight: 700;
   color: $color-primary-teal;
 }
+.heading-tertiary {
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  color: $color-primary-teal--darker;
+  border-bottom: 5px solid $color-primary-teal--darker;
+}
 .paragraphy {
   font-size: 2rem;
   color: $color-primary-teal--darker;

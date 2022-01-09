@@ -15,3 +15,21 @@
     background-color: #e69e32;
   }
 }
+.btn--submit {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  font-family: inherit;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  background-color: $color-primary-teal--darker;
+  text-decoration: none;
+  color: $color-primary-teal;
+  border-radius: 50px;
+  border: none;
+  &:hover {
+    transform: translateY(-5%);
+    font-weight: 600;
+  }
+}
