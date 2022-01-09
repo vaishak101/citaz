@@ -49,3 +49,18 @@ document.addEventListener('keydown', function (e) {
     nextSlide();
   }
 });
+document.querySelector('.nav__ul').addEventListener('click', function (e) {
+  if (e.target.classList.contains('nav__link')) {
+    e.preventDefault();
+    // hideMobNav();
+    let id = e.target.getAttribute('href');
+    let sid = document.querySelector(id);
+    let idcord = sid.getBoundingClientRect();
+    // revealSection();
+    window.scrollTo({
+      left: idcord.left + window.pageXOffset,
+      top: idcord.top + window.pageYOffset,
+      behavior: 'smooth',
+    });
+  }
+});
