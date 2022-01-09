@@ -1,0 +1,61 @@
+.footer {
+  padding: 10rem 2rem;
+  background-color: $color-black;
+  // &__logo-box {
+  // }
+  &__logo {
+    background-color: $color-primary-teal;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+  }
+  &__img-name {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.7rem;
+    color: $color-primary-teal;
+  }
+  &__link-box {
+    padding: 0 4rem;
+    width: 100%;
+  }
+  &__ul {
+    list-style-type: none;
+    @include flex-center;
+    gap: 2rem;
+  }
+  &__link {
+    display: inline-block;
+    transition: all 0.2s ease;
+    &:link,
+    &:visited {
+      color: $color-primary-teal;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+    }
+    &:hover {
+      // transform: scale(1.1);
+      // color: $color-primary-gold--light;
+      font-weight: 400;
+    }
+    &--name {
+      &:hover {
+        font-weight: 900;
+      }
+    }
+  }
+  &__text-box {
+    @include flex-center;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 80rem;
+  }
+  &__para {
+    color: $color-primary-grey;
+    font-size: 1.1rem;
+    font-weight: 200;
+    word-spacing: 0.5rem;
+  }
+}

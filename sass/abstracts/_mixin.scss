@@ -1,3 +1,11 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 //FLEX
 @mixin flex-space-bw {
   display: flex;
