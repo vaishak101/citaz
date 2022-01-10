@@ -8,8 +8,7 @@ let maxSlide = slide.length - 1;
 
 const slider = function (cursl) {
   slide.forEach(
-    (s, i) =>
-      (s.style.transform = `translateX(${55 * (i - cursl)}%) scale(0.8)`)
+    (s, i) => (s.style.transform = `translate(${55 * (i - cursl)}%) scale(0.8)`)
   );
   slide.forEach((s, i) =>
     i === cursl
