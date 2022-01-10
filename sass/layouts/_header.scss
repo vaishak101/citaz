@@ -9,39 +9,14 @@
   );
   position: relative;
   clip-path: ellipse(100% 66% at 22% 27%);
+  @include respond(tab-port) {
+    height: 100rem;
+  }
 }
 
-.nav {
-  z-index: 92437991;
-  position: absolute;
-  padding: 0.5rem 2rem;
-  width: 100%;
-  @include flex-space-bw;
-  &__logo {
-    width: 7rem;
-    height: 7rem;
-  }
-  &__ul {
-    list-style-type: none;
-    @include flex-center;
-    gap: 2rem;
-  }
-  &__link {
-    &:link,
-    &:visited {
-      text-decoration: none;
-      font-size: 2rem;
-      color: $color-primary-teal--darker;
-      font-weight: 300;
-    }
-    &:hover,
-    &:active {
-      font-weight: 400;
-    }
-  }
-}
 .hero {
   max-width: 114rem;
+  overflow: hidden;
   &__img {
     width: 28rem;
     height: 24rem;
@@ -51,6 +26,13 @@
     transform: translateY(45%) rotate(-10deg) scale(1.1);
     animation: moveInBottom 0.5s ease-out 0.65s;
     animation-fill-mode: backwards;
+    @include respond(tab-port) {
+      left: 50%;
+      bottom: 40%;
+      transform: translate(-50%, 45%) rotate(-10deg) scale(1.5);
+      animation: moveInBottomTab 0.5s ease-out 0.65s;
+      animation-fill-mode: backwards;
+    }
   }
   &__text-box {
     position: absolute;
@@ -59,22 +41,13 @@
     width: 50%;
     animation: moveInRight 0.5s ease-out 0.65s;
     animation-fill-mode: backwards;
-  }
-}
-//sticky nav
-.nav__sticky {
-  z-index: 92437991;
-  position: fixed;
-
-  background-color: $color-grad-1__col-1;
-  background-image: linear-gradient(
-    215deg,
-    ($color-grad-1__col-2) 0%,
-    ($color-grad-1__col-1) 64%
-  );
-  opacity: 0.9;
-  transition: opacity 0.5s ease;
-  &:hover {
-    opacity: 1;
+    @include respond(tab-port) {
+      top: 15%;
+      left: 50%;
+      transform: translateX(-25%);
+      // width: 100%;
+      animation: moveInRightTab 0.5s ease-out 0.65s;
+      animation-fill-mode: backwards;
+    }
   }
 }

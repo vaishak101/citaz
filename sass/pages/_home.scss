@@ -3,20 +3,34 @@
   margin: 0 auto;
 }
 .features {
-  margin-top: 10rem;
+  margin: 10rem auto;
   padding: 3rem 2rem;
-  padding-bottom: 10rem;
+  padding-top: 9rem;
+  @include respond(tab-port) {
+    height: 120rem;
+  }
+  @include respond(phone) {
+    height: 250rem;
+  }
+  @include respond(small-phone) {
+    height: 270rem;
+  }
 }
 .operations {
   margin: 10rem auto;
   padding: 3rem 2rem;
+  padding-top: 9rem;
   padding-bottom: 15rem;
 }
 .testimonials {
+  margin: 10rem auto;
   padding: 3rem 2rem;
+  padding-top: 9rem;
 }
 .cta {
+  margin: 10rem auto;
   padding: 3rem 2rem;
+  padding-top: 9rem;
 }
 .section {
   transition: all 0.5s ease;

@@ -11,6 +11,9 @@
     $color-grad-1__col-2 0%,
     $color-grad-1__col-1 64%
   );
+  @include respond(tab-port) {
+    padding: 5rem 6rem;
+  }
 }
 
 .form {

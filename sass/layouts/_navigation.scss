@@ -1,0 +1,116 @@
+.nav {
+  z-index: 92437991;
+  position: absolute;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  @include flex-space-bw;
+  &__logo {
+    width: 7rem;
+    height: 7rem;
+  }
+  &__ul {
+    list-style-type: none;
+    @include flex-center;
+    gap: 5rem;
+    @include respond(phone) {
+      & {
+        background-color: $color-grad-1__col-1;
+        background-image: linear-gradient(
+          215deg,
+          $color-grad-1__col-2 0%,
+          $color-grad-1__col-1 64%
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        @include flex-col-center;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 2rem;
+      color: $color-primary-teal--darker;
+      font-weight: 300;
+    }
+    &:hover,
+    &:active {
+      font-weight: 400;
+    }
+  }
+  &__mob--cont {
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-between;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    @include respond(phone) {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+    }
+  }
+  &__mob-btn {
+    background: transparent;
+    border: none;
+    color: $color-primary-teal--darker;
+    font-size: 4rem;
+    z-index: 92543121222;
+  }
+  &__mob-btn--close {
+    background: transparent;
+    border: none;
+    color: $color-primary-teal--darker;
+    font-size: 4rem;
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    display: none;
+    @include respond(phone) {
+      display: block;
+    }
+  }
+  &__logo--mob {
+    background-color: $color-primary-teal--darker;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+  }
+}
+//sticky nav
+.nav__sticky {
+  z-index: 92437991;
+  position: fixed;
+
+  background-color: $color-grad-1__col-1;
+  background-image: linear-gradient(
+    215deg,
+    ($color-grad-1__col-2) 0%,
+    ($color-grad-1__col-1) 64%
+  );
+  opacity: 0.9;
+  transition: opacity 0.5s ease;
+  &:hover {
+    opacity: 1;
+  }
+  @include respond(phone) {
+    position: absolute;
+  }
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}

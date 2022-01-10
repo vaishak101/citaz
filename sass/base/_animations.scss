@@ -27,3 +27,33 @@
     opacity: 1;
   }
 }
+
+@keyframes moveInRightTab {
+  0% {
+    transform: translateX(20rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-30%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-25%);
+    opacity: 1;
+  }
+}
+@keyframes moveInBottomTab {
+  0% {
+    left: 50%;
+    bottom: -30%;
+    transform: rotate(0) scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    left: 50%;
+    bottom: 40%;
+    transform: translate(-50%, 45%) rotate(-10deg) scale(1.5);
+    opacity: 1;
+  }
+}

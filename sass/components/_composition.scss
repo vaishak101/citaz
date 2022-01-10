@@ -1,6 +1,6 @@
 .composition {
   position: relative;
-  height: 60vh;
+  height: 50rem;
 }
 .card {
   position: absolute;
@@ -8,12 +8,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20%;
-  height: 100%;
+  height: 40rem;
   background: #e7f5f5;
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.5s ease;
   box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+
   &__1 {
     transform: translate(25%, -50%) scale(0.6);
     opacity: 0.4;
@@ -75,34 +76,54 @@
     width: 100%;
   }
 }
-// &__photo {
-//   width: 55%;
-//   position: absolute;
-//   border-radius: 2px;
-//   box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
-//   z-index: 10;
-//   transition: all 0.2s ease-in-out;
-//   outline-offset: 2rem;
-//   &--p1 {
-//     top: -2rem;
-//   }
-
-//   &--p2 {
-//     right: 0;
-//     top: 2rem;
-//   }
-
-//   &--p3 {
-//     top: 10rem;
-//     left: 9rem;
-//   }
-//   &:hover {
-//     z-index: 11;
-//     transform: scale(1.1) translateY(-0.5rem);
-//     box-shadow: 0 2rem 3rem rgba($color-black, 0.2);
-//     outline: 1.5rem solid $color-primary;
-//   }
-// }
-// &:hover &__photo:not(:hover) {
-//   transform: scale(0.9);
-// }
+@include respond(tab-port) {
+  .composition {
+    position: relative;
+    height: 50rem;
+  }
+  .card {
+    position: static;
+    transform: translate(0, 0);
+    width: 20rem;
+    height: 40rem;
+    margin: 0 auto;
+    background: #e7f5f5;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+    &:hover {
+      transform: translate(0, 0) scale(1);
+    }
+    &__1 {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+      z-index: 9993;
+    }
+    &__2 {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+      z-index: 9994;
+    }
+    &__3 {
+      transform: translate(0, 0) scale(1);
+      z-index: 9995;
+    }
+    &__4 {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+      z-index: 9994;
+    }
+    &__5 {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+      z-index: 9993;
+    }
+    &__content {
+      padding: 1rem 2.5rem;
+    }
+    &__img {
+      width: 100%;
+    }
+  }
+}
