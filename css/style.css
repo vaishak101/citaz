@@ -67,6 +67,11 @@ body {
   font-size: 1.5rem;
   color: #40514e;
 }
+@media (max-width: 28.25em) {
+  .paragraph {
+    font-size: 1rem;
+  }
+}
 
 .paragraphy {
   font-size: 2rem;
@@ -194,12 +199,8 @@ body {
     transform: translateX(20rem);
     opacity: 0;
   }
-  80% {
-    transform: translateX(-30%);
-    opacity: 1;
-  }
   100% {
-    transform: translateX(-25%);
+    transform: translateX(-50%);
     opacity: 1;
   }
 }
@@ -234,6 +235,12 @@ body {
 .operations__btn--3 {
   background-color: #e69e32;
 }
+@media (max-width: 28.25em) {
+  .operations__btn {
+    padding: 1rem 1.3rem;
+    font-size: 0.8rem;
+  }
+}
 
 .btn--submit {
   padding: 1rem 2rem;
@@ -252,6 +259,11 @@ body {
 .btn--submit:hover {
   transform: translateY(-5%);
   font-weight: 700;
+}
+@media (max-width: 28.25em) {
+  .btn--submit {
+    width: 100%;
+  }
 }
 
 .op--active {
@@ -415,6 +427,12 @@ body {
     gap: 2rem;
   }
 }
+@media (max-width: 28.25em) {
+  .operations__container--btn {
+    width: 80%;
+    gap: 1rem;
+  }
+}
 
 .tab {
   background-color: #0beef9;
@@ -428,6 +446,16 @@ body {
 }
 .tab__active {
   z-index: 10000;
+}
+@media (max-width: 37.5em) {
+  .tab {
+    padding: 2rem 4rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .tab {
+    padding: 2rem;
+  }
 }
 
 .slider {
@@ -453,13 +481,30 @@ body {
   font-size: 3.25rem;
   cursor: pointer;
 }
+@media (max-width: 28.25em) {
+  .slider__btn {
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.25rem;
+  }
+}
 .slider__btn--left {
   left: 6%;
   transform: translate(-50%, -50%);
 }
+@media (max-width: 28.25em) {
+  .slider__btn--left {
+    left: 12%;
+  }
+}
 .slider__btn--right {
   right: 6%;
   transform: translate(50%, -50%);
+}
+@media (max-width: 28.25em) {
+  .slider__btn--right {
+    right: 12%;
+  }
 }
 @media (max-width: 28.25em) {
   .slider {
@@ -512,7 +557,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .slide_content__name {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 28.25em) {
@@ -574,6 +619,16 @@ body {
     padding: 5rem 6rem;
   }
 }
+@media (max-width: 37.5em) {
+  .contact_form {
+    padding: 4rem;
+  }
+}
+@media (max-width: 28.25em) {
+  .contact_form {
+    padding: 3rem 2rem;
+  }
+}
 
 .form {
   display: flex;
@@ -591,6 +646,14 @@ body {
 .form__group:not(:last-child) {
   margin-bottom: 2rem;
 }
+@media (max-width: 28.25em) {
+  .form__group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 .form__label {
   width: 50%;
   font-size: 2rem;
@@ -600,6 +663,11 @@ body {
 }
 .form__label:hover {
   font-weight: 900;
+}
+@media (max-width: 28.25em) {
+  .form__label {
+    width: 100%;
+  }
 }
 .form__input {
   font-size: 1.5rem;
@@ -620,6 +688,11 @@ body {
 }
 .form__input:focus:invalid {
   border-bottom: 3px solid red;
+}
+@media (max-width: 28.25em) {
+  .form__input {
+    width: 100%;
+  }
 }
 
 .row {
@@ -687,6 +760,11 @@ body {
   position: relative;
   clip-path: ellipse(100% 66% at 22% 27%);
 }
+@media (max-width: 28.25em) {
+  .header {
+    clip-path: ellipse(100% 70% at 50% 30%);
+  }
+}
 @media (max-width: 56.25em) {
   .header {
     height: 100rem;
@@ -699,7 +777,6 @@ body {
 }
 .hero__img {
   width: 28rem;
-  height: 24rem;
   position: absolute;
   left: 10%;
   bottom: 50%;
@@ -716,6 +793,11 @@ body {
     animation-fill-mode: backwards;
   }
 }
+@media (max-width: 28.25em) {
+  .hero__img {
+    width: 16rem;
+  }
+}
 .hero__text-box {
   position: absolute;
   right: 0%;
@@ -728,7 +810,7 @@ body {
   .hero__text-box {
     top: 15%;
     left: 50%;
-    transform: translateX(-25%);
+    transform: translateX(-50%);
     animation: moveInRightTab 0.5s ease-out 0.65s;
     animation-fill-mode: backwards;
   }
@@ -938,12 +1020,11 @@ body {
 }
 
 .operations {
-  margin: 10rem auto;
+  margin-top: 10rem;
+  margin: 0rem auto;
   padding: 3rem 2rem;
   padding-top: 9rem;
-  padding-bottom: 15rem;
 }
-
 .testimonials {
   margin: 10rem auto;
   padding: 3rem 2rem;
@@ -953,7 +1034,6 @@ body {
 .cta {
   margin: 10rem auto;
   padding: 3rem 2rem;
-  padding-top: 9rem;
 }
 
 .section {

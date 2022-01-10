@@ -23,6 +23,12 @@
   justify-content: center;
   flex-direction: column;
 }
+@mixin flex-col-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
 // MEDIA QUERY Manager
 @mixin respond($breakpoint) {
   @if $breakpoint== small-phone {

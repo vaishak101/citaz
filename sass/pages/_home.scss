@@ -17,10 +17,17 @@
   }
 }
 .operations {
-  margin: 10rem auto;
+  margin-top: 10rem;
+  margin: 0rem auto;
   padding: 3rem 2rem;
   padding-top: 9rem;
-  padding-bottom: 15rem;
+
+  // padding-bottom: 15rem;
+
+  @include respond(phone) {
+  }
+  @include respond(small-phone) {
+  }
 }
 .testimonials {
   margin: 10rem auto;
@@ -30,7 +37,6 @@
 .cta {
   margin: 10rem auto;
   padding: 3rem 2rem;
-  padding-top: 9rem;
 }
 .section {
   transition: all 0.5s ease;

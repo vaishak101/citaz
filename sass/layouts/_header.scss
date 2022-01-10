@@ -9,6 +9,9 @@
   );
   position: relative;
   clip-path: ellipse(100% 66% at 22% 27%);
+  @include respond(small-phone) {
+    clip-path: ellipse(100% 70% at 50% 30%);
+  }
   @include respond(tab-port) {
     height: 100rem;
   }
@@ -19,7 +22,6 @@
   overflow: hidden;
   &__img {
     width: 28rem;
-    height: 24rem;
     position: absolute;
     left: 10%;
     bottom: 50%;
@@ -33,6 +35,9 @@
       animation: moveInBottomTab 0.5s ease-out 0.65s;
       animation-fill-mode: backwards;
     }
+    @include respond(small-phone) {
+      width: 16rem;
+    }
   }
   &__text-box {
     position: absolute;
@@ -44,7 +49,7 @@
     @include respond(tab-port) {
       top: 15%;
       left: 50%;
-      transform: translateX(-25%);
+      transform: translateX(-50%);
       // width: 100%;
       animation: moveInRightTab 0.5s ease-out 0.65s;
       animation-fill-mode: backwards;

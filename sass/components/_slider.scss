@@ -21,14 +21,25 @@
     width: 5.5rem;
     font-size: 3.25rem;
     cursor: pointer;
+    @include respond(small-phone) {
+      height: 3.5rem;
+      width: 3.5rem;
+      font-size: 1.25rem;
+    }
     &--left {
       left: 6%;
       transform: translate(-50%, -50%);
+      @include respond(small-phone) {
+        left: 12%;
+      }
     }
 
     &--right {
       right: 6%;
       transform: translate(50%, -50%);
+      @include respond(small-phone) {
+        right: 12%;
+      }
     }
   }
   @include respond(small-phone) {
@@ -77,7 +88,7 @@
       letter-spacing: 0.3rem;
       color: $color-primary-teal--darker;
       @include respond(phone) {
-        font-size: 3rem;
+        font-size: 2rem;
       }
       @include respond(small-phone) {
         width: 7rem;

@@ -14,6 +14,10 @@
   &--3 {
     background-color: #e69e32;
   }
+  @include respond(small-phone) {
+    padding: 1rem 1.3rem;
+    font-size: 0.8rem;
+  }
 }
 .btn--submit {
   padding: 1rem 2rem;
@@ -31,6 +35,9 @@
   &:hover {
     transform: translateY(-5%);
     font-weight: 700;
+  }
+  @include respond(small-phone) {
+    width: 100%;
   }
 }
 .op--active {
