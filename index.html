@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script async src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,9 @@
     <title>Citaz Bank</title>
   </head>
   <body>
-    <div class="nav">
+    <!-- NAVIGATIOn**********************************************************************HEADER -->
+
+    <nav class="nav">
       <a href="#" class="nav__logo__link"
         ><img src="img/logo/logo.png" class="nav__logo" alt="Citaz logo"
       /></a>
@@ -41,12 +43,14 @@
           <ion-icon name="close-outline"></ion-icon>
         </button>
       </ul>
+      <!-- Mobile**********************************************************************HEADER -->
+
       <div class="nav__mob--cont">
         <button class="nav__mob-btn">
           <ion-icon name="menu-outline"></ion-icon>
         </button>
       </div>
-    </div>
+    </nav>
     <!-- HEADER**********************************************************************HEADER -->
     <header class="header">
       <div class="hero">
@@ -376,7 +380,7 @@
                 Enter your following details
               </h1>
               <div class="form__group">
-                <label for="first_name" class="form__label">Full Name</label>
+                <label for="first_name" class="form__label">First Name</label>
                 <input
                   type="text"
                   class="form__input"
@@ -464,33 +468,3 @@
     ></script>
   </body>
 </html>
-<!-- <section class="grid-test">
-        <div class="row">
-          <div class="col-1-of-2">col 1 of 2</div>
-          <div class="col-1-of-2">col 1 of 2</div>
-        </div>
-        <div class="row">
-          <div class="col-1-of-3">col 1 of 3</div>
-          <div class="col-1-of-3">col 1 of 3</div>
-          <div class="col-1-of-3">col 1 of 3</div>
-        </div>
-        <div class="row">
-          <div class="col-1-of-3">col 1 of 3</div>
-          <div class="col-2-of-3">col 2 of 3</div>
-        </div>
-        <div class="row">
-          <div class="col-1-of-4">col 1 of 4</div>
-          <div class="col-1-of-4">col 1 of 4</div>
-          <div class="col-1-of-4">col 1 of 4</div>
-          <div class="col-1-of-4">col 1 of 4</div>
-        </div>
-        <div class="row">
-          <div class="col-1-of-4">col 1 of 4</div>
-          <div class="col-1-of-4">col 1 of 4</div>
-          <div class="col-2-of-4">col 2 of 4</div>
-        </div>
-        <div class="row">
-          <div class="col-1-of-4">col 1 of 4</div>
-          <div class="col-3-of-4">col 3 of 4</div>
-        </div>
-      </section> -->
