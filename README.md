@@ -1,6 +1,6 @@
 # Citaz Bank
 
-## A Minimalistically designed website for Vaishak Nair 's portfolio
+## A Minimalistic designed website for Vaishak Nair 's portfolio
 
 #### Demo project for portfolio
 
